@@ -1,0 +1,337 @@
+/*fonts*/
+@font-face{
+	font-family: "Din";
+    src: url('fonts/dinproregular.otf');
+	}
+
+@font-face{
+	font-family: "DinBold";
+    src: url('fonts/dinprobold.otf');
+	}
+
+@font-face{
+font-family: "DinMedium";
+    src: url('fonts/dinpromedium.otf');
+	}
+
+@font-face{
+	font-family: "DinLight";
+    src: url('fonts/dinprolight.otf');
+	}
+
+/*fonts*/
+body{
+    font-family: "Din", "Helvetica", sans-serif;
+    margin: 0 auto;
+    color: #141414;
+}
+
+header{
+    width: 5em;
+    height: 4em;
+    position: fixed;
+    background: #fff;
+    display: block;  
+    box-shadow: 0 0 20px 10px rgba(0,0,0, .03);
+    z-index: 9999;
+    padding: .1em 0 0 .9em; 
+}
+
+header a img{
+    display: block;
+    height: auto; 
+    margin-top: .5em;
+}
+
+.logo{
+    display: block;
+    width: 60px;
+    height: 100%;
+    float: left;
+    background-image: url(photos/logo_sprite.png);
+    background-size: 100%;
+    background-position: 0 -38px;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+}
+
+.logo:hover{
+    background-position: 0 11px;
+}
+
+.container{
+    width: 80%;
+    max-width: 1280px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.titre__accueil{
+    font-size: 9.5em;
+    color: #fff;
+    font-family: 'DinLight', 'Helvetica', sans-serif;
+    font-weight: lighter;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.credit{
+    color: #fe4908;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    display: block;
+    width: 21.5em;
+    margin: -1.2em auto 0;
+    text-align: right;
+    font-family: 'DinBold', 'Helvetica', sans-serif;
+    font-weight: bold;
+}
+
+#accueil{
+    background-image: url(photos/pointe-noir.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    height: 40em;
+    top: 0;
+    margin-top: 0;
+    padding-top: 5em;
+}
+
+h3{
+    text-transform: uppercase;
+    font-family: 'DinLight', 'Helvetica', sans-serif;
+    font-size: 1.7em;
+    margin: .6em auto 1.35em;
+    position: relative;
+}
+
+h3:after{
+    content: '';
+    display: block;
+    width: 10px;
+    height: 2px;
+    background-color: #fe4908;
+    position: absolute;
+}
+
+div:last-child h3:after{
+     margin-left: .15em;
+}
+
+p a{
+    color: #fe4908;
+     font-family: 'DinBold', 'Helvetica', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+p a:hover{
+    text-decoration: underline
+}
+#suivant{
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1280px;
+    margin-top: .2em;
+    overflow: hidden;
+}
+
+#suivant div:first-child{
+    display: block;
+    width: 55.185%;
+    float: left;
+}
+
+#suivant div:last-child{
+    display: block;
+    width: 44%;
+    float: right;
+}
+
+ul, li{
+   margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+#suivant p{
+    margin: 0 ;
+    width: 79.75%;
+}
+
+#suivant div:first-child p:last-child{
+    margin-top: 1.6em;
+    font-family: 'DinBold', 'Helvetica', sans-serif;
+    font-weight: bold;
+}
+#suivant p, #suivant li{
+    font-size: 1.2em;
+    line-height: 1.667em;
+}
+
+.retour{
+    display: block;
+    width: 10em;
+    margin: 7.4em auto 10em;
+    font-size: 1.3em;
+    text-align:center;
+    padding: 1em;
+    text-decoration: none;
+    border: 2px solid #141414;
+    color: #fff;
+    position: relative;
+    transition: .5s ease;
+}
+
+.retour:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #141414;
+    top: 0;
+    left: 0;
+    z-index: -1;
+        transition: .8s ease;
+}
+
+.retour:hover{
+    color: #141414;
+    
+}
+
+.retour:hover:after{
+    height: 0;
+}
+
+li{
+    position: relative;
+}
+
+li:before{
+    content: '';
+    background-color: #fe4908;
+    width: 5px;
+    height: 5px;
+    display: block;
+    position: absolute;
+    transform: rotate(45deg);
+    top: .65em;
+    left: -.85em;
+}
+
+@media(max-width: 1213px){
+    #accueil{
+        background-image: url(photos/pointe-noir_medium.jpg);
+    }
+}
+
+@media(max-width: 1078px){
+    #suivant div:first-child{
+        width: 100%;
+    }
+    
+    #suivant div:last-child{
+        width: 100%;
+        margin-top: 5.65em
+    }
+    
+    #suivant{
+        overflow: visible;
+        height: 48.5em;
+    }
+    
+    #suivant div:first-child p{
+        width: 100%;
+    }
+}
+
+@media(max-width: 854px){
+    #accueil{
+        background-image: url(photos/pointe-noir_small.jpg);
+    }
+}
+
+@media(max-width: 746px){
+    #suivant{
+        height: 52.5em;
+    }
+}
+
+@media(max-width: 586px){
+    .titre__accueil{
+        font-size: 6em;
+        margin-top: 1.2em
+    }
+    
+    .credit{
+        width: 13.5em;
+        margin-top: -1em;
+    }
+}
+
+@media(max-width: 517px){    
+    #accueil{
+        background-image: url(photos/pointe-noir_xsmall.jpg);
+    }
+    
+    #suivant{
+        height: 58.5em;
+    }
+    
+    .retour{
+        width: 85%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media(max-width: 447px){
+    .reseaux{
+        width: 9.25em
+    }
+    
+    .reseaux a:nth-child(2n){
+        margin-right: 0;
+    }
+    
+    .reseaux a{
+        margin-bottom: 1em;
+    }
+}
+
+@media(max-width: 375px){
+    .titre__accueil{
+        font-size: 5em;
+        margin-top: 1.8em
+    }
+    
+    .credit{
+        width: 11.2em;
+        margin-top: -.8em;
+    }
+    
+    #suivant{
+        height: 65em;
+    }
+}
+
+@media(max-width: 307px){
+
+    #suivant{
+        height: 70em;
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+ only screen and (-o-min-device-pixel-ratio: 2),
+ only screen and (-moz-min-device-pixel-ratio: 2),
+    only screen and (min-device-pixel-ratio: 2) {
+        #accueil{
+            background-image: url(photos/pointe-noir@2x.jpg);
+        }
+}
